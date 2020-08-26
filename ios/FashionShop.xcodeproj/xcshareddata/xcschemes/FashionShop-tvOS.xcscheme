@@ -7,7 +7,7 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForFashionShoping = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -15,31 +15,31 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Test-tvOS.app"
-               BlueprintName = "Test-tvOS"
-               ReferencedContainer = "container:Test.xcodeproj">
+               BuildableName = "FashionShop-tvOS.app"
+               BlueprintName = "FashionShop-tvOS"
+               ReferencedContainer = "container:FashionShop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
-   <TestAction
+   <FashionShopAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-         <TestableReference
+      <FashionShopables>
+         <FashionShopableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Test-tvOSTests.xctest"
-               BlueprintName = "Test-tvOSTests"
-               ReferencedContainer = "container:Test.xcodeproj">
+               BuildableName = "FashionShop-tvOSFashionShops.xctest"
+               BlueprintName = "FashionShop-tvOSFashionShops"
+               ReferencedContainer = "container:FashionShop.xcodeproj">
             </BuildableReference>
-         </TestableReference>
-      </Testables>
-   </TestAction>
+         </FashionShopableReference>
+      </FashionShopables>
+   </FashionShopAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Test-tvOS.app"
-            BlueprintName = "Test-tvOS"
-            ReferencedContainer = "container:Test.xcodeproj">
+            BuildableName = "FashionShop-tvOS.app"
+            BlueprintName = "FashionShop-tvOS"
+            ReferencedContainer = "container:FashionShop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Test-tvOS.app"
-            BlueprintName = "Test-tvOS"
-            ReferencedContainer = "container:Test.xcodeproj">
+            BuildableName = "FashionShop-tvOS.app"
+            BlueprintName = "FashionShop-tvOS"
+            ReferencedContainer = "container:FashionShop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

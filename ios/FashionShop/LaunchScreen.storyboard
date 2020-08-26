@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
                                 <rect key="frame" x="0.0" y="647" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="223.5" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,24 +34,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="vOX-iv-vvo">
-                                <rect key="frame" x="0.0" y="223.5" width="375" height="415.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="vOX-iv-vvo">
+                                <rect key="frame" x="0.0" y="-80" width="375" height="826"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Of0-fs-usb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="aV8-8H-GsG"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="g4d-R9-B9Z"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="mXt-0d-b7I"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="vOX-iv-vvo" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="IMP-AX-9DW"/>
+                            <constraint firstAttribute="bottom" secondItem="vOX-iv-vvo" secondAttribute="bottom" id="MkK-AA-vBy"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="MN2-I3-ftu" secondAttribute="bottom" constant="20" id="OZV-Vh-mqD"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="top" secondItem="vOX-iv-vvo" secondAttribute="bottom" id="PLb-dQ-YG2"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
+                            <constraint firstAttribute="bottom" secondItem="vOX-iv-vvo" secondAttribute="bottom" id="S1e-vC-2a1"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="vOX-iv-vvo" secondAttribute="trailing" id="U3L-Wi-6ly"/>
                             <constraint firstItem="vOX-iv-vvo" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="8" symbolic="YES" id="UZL-hd-yx4"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="vOX-iv-vvo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZhV-r0-Nho"/>
+                            <constraint firstItem="vOX-iv-vvo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aPH-Mt-TLR"/>
                             <constraint firstItem="MN2-I3-ftu" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="akx-eg-2ui"/>
                             <constraint firstItem="MN2-I3-ftu" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="i1E-0Y-4RG"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="top" secondItem="vOX-iv-vvo" secondAttribute="bottom" id="kDS-SG-bUZ"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
+                            <constraint firstAttribute="bottom" secondItem="vOX-iv-vvo" secondAttribute="bottom" id="nXj-tc-ny5"/>
                             <constraint firstItem="vOX-iv-vvo" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" id="pgL-5Q-DwY"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="top" secondItem="vOX-iv-vvo" secondAttribute="bottom" constant="8" symbolic="YES" id="rP3-fO-jdM"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="x7j-FC-K8j"/>
@@ -61,10 +73,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="launch_screen" width="375" height="667"/>
+        <image name="launch_screen" width="219.5" height="475.5"/>
     </resources>
 </document>

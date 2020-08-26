@@ -1,5 +1,5 @@
 {
-  "name": "Test",
+  "name": "FashionShop",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,11 +11,13 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "doctor": "npx @react-native-community/cli doctor",
     "clean:android": "cd android && ./gradlew clean && cd ..",
+    "rename": "npx react-native-rename",
     "clean:ios": "cd ios && xcodebuild clean && cd ..",
     "delete:cache": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache verify && yarn && yarn start --reset-cache"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.7.3",
     "react": "16.13.1",

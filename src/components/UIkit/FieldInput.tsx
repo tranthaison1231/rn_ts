@@ -1,9 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { TextInput, HelperText } from 'react-native-paper';
 
-const FieldInput = ({ form, name, label, mode, placeholder, rules }) => {
+interface FieldInputProps {
+  form: any;
+  name: string;
+  label: string;
+  mode?: 'flat' | 'outlined' | undefined;
+  placeholder?: string;
+  rules?: any;
+  disabled?: boolean | undefined;
+}
+
+const FieldInput: FC<FieldInputProps> = ({
+  form,
+  name,
+  label,
+  mode,
+  placeholder,
+  rules,
+  disabled,
+}) => {
   return (
     <>
       <Controller
@@ -18,6 +36,7 @@ const FieldInput = ({ form, name, label, mode, placeholder, rules }) => {
             mode={mode}
             onChangeText={(value) => props.onChange(value)}
             placeholder={placeholder}
+            disabled={disabled}
           />
         )}
       />

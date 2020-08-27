@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 export const formatNumber = (number, n = 0, x = 3, suffix = '') => {
   const re = `\\d(?=(\\d{${x}})+${n > 0 ? '\\.' : '$'})`;
   return number

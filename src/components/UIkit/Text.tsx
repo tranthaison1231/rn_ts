@@ -11,6 +11,7 @@ interface TextProps extends StyleSpaceProps, StyleFlexBoxProps, TextProps {
   bg?: string;
   color?: string;
   size?: number;
+  textAlign: 'auto' | 'left' | 'right' | 'center' | 'justify';
 }
 
 const Text: FC<TextProps> = ({
@@ -18,6 +19,7 @@ const Text: FC<TextProps> = ({
   style,
   bold,
   size,
+  txtAlign,
   children,
   ...props
 }: TextProps) => {
@@ -26,6 +28,7 @@ const Text: FC<TextProps> = ({
     [...styleFlexBox(props)],
     size && { fontSize: size },
     bold && styles.bold,
+    txtAlign && { textAlign: txtAlign },
     color && { color: color },
     style,
   ];

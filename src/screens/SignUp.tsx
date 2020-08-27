@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const SingUp = () => {
   const { navigate } = useNavigation();
+
   return (
     <SafeAreaView>
       <TouchableOpacity onPress={() => navigate('Home')}>

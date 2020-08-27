@@ -9,7 +9,8 @@ import { useTheme } from 'react-native-paper';
 import Root from './Root';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import Counter from './Counter';
+import Caculation from './Caculation/Caculation';
+import History from './Caculation/History';
 
 const Stack = createStackNavigator();
 
@@ -19,14 +20,20 @@ export const RootNavigator = () => {
 
   return (
     <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator initialRouteName="Root">
-        <Stack.Screen name="Counter" component={Counter} />
+      <Stack.Navigator
+        initialRouteName="Caculation"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Caculation" component={Caculation} />
+        <Stack.Screen name="History" component={History} />
         <Stack.Screen name="Root" component={Root} />
         <Stack.Screen
           name="SignUp"
           component={SignUp}
           options={{
-            headerShown: false,
+            gestureEnabled: false,
           }}
         />
         <Stack.Screen name="SignIn" component={SignIn} />

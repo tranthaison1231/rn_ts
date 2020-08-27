@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { View, ViewProps } from 'react-native';
 import {
   styleFlexBox,
@@ -12,21 +12,38 @@ import {
 interface BoxProps extends StyleSpaceProps, StyleFlexBoxProps, ViewProps {
   circle?: boolean;
   bg?: string;
+  borderBottomWidth?: number;
+  borderBottomColor?: string;
+  as?: ReactNode;
 }
 
-const Box: FC<BoxProps> = ({ circle, style, children, bg, ...props }) => {
+const Box: FC<BoxProps> = ({
+  circle,
+  style,
+  children,
+  bg,
+  borderBottomColor,
+  borderBottomWidth,
+  as = View,
+  ...props
+}) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
     [...styleShadow(props)],
     bg && { backgroundColor: bg },
+    borderBottomColor && { borderBottomColor: borderBottomColor },
+    borderBottomWidth && { borderBottomWidth: borderBottomWidth },
     circle && styles.circle,
     style,
   ];
-  return (
-    <View style={blockStyles} {...props}>
-      {children}
-    </View>
+  return React.createElement(
+    as,
+    {
+      style: blockStyles,
+      ...props,
+    },
+    children,
   );
 };
 

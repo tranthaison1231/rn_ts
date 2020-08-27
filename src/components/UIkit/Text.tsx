@@ -10,18 +10,21 @@ import {
 interface TextProps extends StyleSpaceProps, StyleFlexBoxProps, TextProps {
   bg?: string;
   color?: string;
+  size?: number;
 }
 
 const Text: FC<TextProps> = ({
   color,
   style,
   bold,
+  size,
   children,
   ...props
 }: TextProps) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
+    size && { fontSize: size },
     bold && styles.bold,
     color && { color: color },
     style,

@@ -2,12 +2,12 @@ import React from 'react';
 import Text from '../components/UIkit/Text';
 import Box from '../components/UIkit/Box';
 
-const Home = () => {
+const SignIn = () => {
   return (
     <Box flex={1} justify="center" align="center">
-      <Text>Home</Text>
+      <Text>SignIn</Text>
     </Box>
   );
 };
 
-export default Home;
+export default SignIn;

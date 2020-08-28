@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "yarn check-types && react-native run-ios",
     "check-types": "tsc",
     "check-types:watch": "tsc --watch",
     "pod:install": "npx pod-install ios",

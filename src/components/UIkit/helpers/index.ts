@@ -86,7 +86,6 @@ export const styleFlexBox = ({
   align && { alignItems: align },
   row && styles.row,
   column && styles.column,
-  flex === 'disabled' && { flex: 0 },
   space && { justifyContent: `space-${space}` },
 ];
 
@@ -96,7 +95,7 @@ export interface StyleFlexBoxProps {
 }
 
 export const styleShadow = ({ shadowColor, boxShadow }: StyleFlexBoxProps) => {
-  const styleObject = [shadowColor && { shadowColor: shadowColor }];
+  const styleObject: any = [shadowColor && { shadowColor: shadowColor }];
 
   if (boxShadow) {
     const depth = boxShadow - 1;

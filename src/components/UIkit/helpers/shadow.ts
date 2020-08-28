@@ -1,4 +1,10 @@
-export function interpolate(i, a, b, a2, b2) {
+export function interpolate(
+  i: number,
+  a: number,
+  b: number,
+  a2: number,
+  b2: number,
+) {
   return ((i - a) * (b2 - a2)) / (b - a) + a2;
 }
 
@@ -84,8 +90,8 @@ export const androidDepth = {
   ],
 };
 
-export function parseShadow(raw) {
-  const values = raw.split(' ').map((val) => +val.replace('px', ''));
+export function parseShadow(raw: String) {
+  const values = raw.split(' ').map((val: String) => +val.replace('px', ''));
   return {
     x: values[0],
     y: values[1],

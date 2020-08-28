@@ -41,6 +41,7 @@ const FieldInput: FC<FieldInputProps> = ({
         )}
       />
       {form.errors[name] && (
+        // @ts-ignore
         <HelperText style={{ color: 'red' }}>
           {form.errors[name]?.message}
         </HelperText>

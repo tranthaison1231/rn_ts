@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { ComponentClass, FunctionComponent } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 
-const withAuth = (Component) => (props) => {
+type ComponentType =
+  | ComponentClass<any, any>
+  | FunctionComponent<any>
+  | undefined;
+
+interface PropType {
+  navigation: any;
+}
+
+const withAuth = (Component: ComponentType) => (props: PropType) => {
   const isAuth = false;
   const { navigate } = props.navigation;
 
@@ -12,7 +21,7 @@ const withAuth = (Component) => (props) => {
       }
     }, [navigate, isAuth]),
   );
-
+  // @ts-ignore
   return <Component {...props} />;
 };
 

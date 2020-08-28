@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent, ComponentClass } from 'react';
 import Home from './Home';
 import Shop from './Shop';
 import Bag from './Bag';
@@ -10,7 +10,13 @@ import withAuth from '../hocs/withAuth';
 
 const Tab = createBottomTabNavigator();
 
-const TAB_SCREENS = [
+interface TabScreen {
+  name: string;
+  component: ComponentClass<any, any> | FunctionComponent<any> | undefined;
+  icon: string;
+}
+
+const TAB_SCREENS: TabScreen[] = [
   {
     name: 'Home',
     component: Home,
@@ -42,31 +48,26 @@ const Root = () => {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      headerMode="none"
       tabBarOptions={{
         activeTintColor: '#DB3022',
         inactiveTintColor: '#9B9B9B',
       }}
     >
-      {TAB_SCREENS.map(({ name, component, tabBarVisible, icon }, index) => (
+      {TAB_SCREENS.map(({ name, component, icon }, index) => (
+        // @ts-ignore
         <Tab.Screen
           key={String(index)}
           name={name}
           component={component}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Icon name={icon} size={size} color={color} light />
+              <Icon name={icon} size={size} color={color} />
             ),
-            tabBarVisible: tabBarVisible,
           }}
         />
       ))}
     </Tab.Navigator>
   );
 };
-
-Root.propTypes = {};
-
-Root.defaultProps = {};
 
 export default Root;

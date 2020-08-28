@@ -7,14 +7,15 @@ import {
   styleSpace,
   StyleSpaceProps,
 } from './helpers';
-interface TextProps extends StyleSpaceProps, StyleFlexBoxProps, TextProps {
+interface TextType extends StyleSpaceProps, StyleFlexBoxProps, TextProps {
   bg?: string;
   color?: string;
+  bold?: boolean;
   size?: number;
-  textAlign: 'auto' | 'left' | 'right' | 'center' | 'justify';
+  txtAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
 }
 
-const Text: FC<TextProps> = ({
+const Text: FC<TextType> = ({
   color,
   style,
   bold,
@@ -22,7 +23,7 @@ const Text: FC<TextProps> = ({
   txtAlign,
   children,
   ...props
-}: TextProps) => {
+}) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
@@ -33,6 +34,7 @@ const Text: FC<TextProps> = ({
     style,
   ];
   return (
+    // @ts-ignore
     <RnText style={blockStyles} {...props}>
       {children}
     </RnText>

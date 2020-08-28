@@ -28,6 +28,7 @@ const theme = {
     primary: 'tomato',
     accent: 'yellow',
   },
+  // @ts-ignore
   fonts: configureFonts(fontConfig),
 };
 

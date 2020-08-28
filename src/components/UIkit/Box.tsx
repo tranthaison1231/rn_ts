@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { View, ViewProps } from 'react-native';
 import {
   styleFlexBox,
@@ -14,7 +14,8 @@ interface BoxProps extends StyleSpaceProps, StyleFlexBoxProps, ViewProps {
   bg?: string;
   borderBottomWidth?: number;
   borderBottomColor?: string;
-  as?: ReactNode;
+  // @ts-ignore
+  as?: any;
 }
 
 const Box: FC<BoxProps> = ({

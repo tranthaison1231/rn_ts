@@ -90,8 +90,8 @@ export const androidDepth = {
   ],
 };
 
-export function parseShadow(raw: String) {
-  const values = raw.split(' ').map((val: String) => +val.replace('px', ''));
+export function parseShadow(raw: string) {
+  const values = raw.split(' ').map((val: string) => +val.replace('px', ''));
   return {
     x: values[0],
     y: values[1],

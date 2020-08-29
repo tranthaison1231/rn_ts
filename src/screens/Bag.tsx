@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../components/UIkit/Text';
-import Box from '../components/UIkit/Box';
+import Box from '@UIkit/Box';
+import Text from '@UIkit/Text';
 
 const Bag = () => {
   return (

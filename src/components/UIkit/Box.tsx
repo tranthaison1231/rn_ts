@@ -14,6 +14,11 @@ interface BoxProps extends StyleSpaceProps, StyleFlexBoxProps, ViewProps {
   bg?: string;
   borderBottomWidth?: number;
   borderBottomColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderLeftWidth?: number;
+  borderTopRightRadius?: number;
+  borderBottomRightRadius?: number;
   // @ts-ignore
   as?: any;
 }
@@ -23,8 +28,13 @@ const Box: FC<BoxProps> = ({
   style,
   children,
   bg,
+  borderWidth,
+  borderColor,
+  borderLeftWidth,
   borderBottomColor,
   borderBottomWidth,
+  borderBottomRightRadius,
+  borderTopRightRadius,
   as = View,
   ...props
 }) => {
@@ -35,6 +45,13 @@ const Box: FC<BoxProps> = ({
     bg && { backgroundColor: bg },
     borderBottomColor && { borderBottomColor: borderBottomColor },
     borderBottomWidth && { borderBottomWidth: borderBottomWidth },
+    borderLeftWidth && { borderLeftWidth: borderLeftWidth },
+    borderTopRightRadius && { borderTopRightRadius: borderTopRightRadius },
+    borderBottomRightRadius && {
+      borderBottomRightRadius: borderBottomRightRadius,
+    },
+    borderColor && { borderColor: borderColor },
+    borderWidth && { borderWidth: borderWidth },
     circle && styles.circle,
     style,
   ];

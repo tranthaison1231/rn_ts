@@ -1,9 +1,9 @@
 import React from 'react';
-import Text from '../components/UIkit/Text';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import Text from '@UIkit/Text';
 
 const SingUp = () => {
   const { navigate } = useNavigation();

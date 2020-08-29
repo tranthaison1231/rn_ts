@@ -6,7 +6,7 @@ import Favorites from './Favorites';
 import Profile from './Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import withAuth from '../hocs/withAuth';
+import withAuth from '@/hocs/withAuth';
 
 const Tab = createBottomTabNavigator();
 
@@ -44,7 +44,7 @@ const TAB_SCREENS: TabScreen[] = [
   },
 ];
 
-const Root = () => {
+const Root = (): JSX.Element => {
   return (
     <Tab.Navigator
       initialRouteName="Home"

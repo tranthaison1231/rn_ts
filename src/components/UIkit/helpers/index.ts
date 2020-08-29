@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { parseShadow, androidDepth, interpolate } from './shadow';
-import { Range } from '../../../utils/type';
+import { Range } from '@/utils/type';
 
 export const styles = StyleSheet.create({
   row: {
@@ -21,6 +21,8 @@ export interface StyleSpaceProps {
   mr?: number | string;
   ml?: number | string;
   mb?: number | string;
+  my?: number | string;
+  mx?: number | string;
   p?: number | string;
   pt?: number | string;
   pr?: number | string;
@@ -36,6 +38,8 @@ export const styleSpace = ({
   mr,
   ml,
   mb,
+  my,
+  mx,
   p,
   pt,
   pr,
@@ -50,6 +54,8 @@ export const styleSpace = ({
   mr && { marginRight: mr },
   ml && { marginLeft: ml },
   mb && { marginBottom: mb },
+  my && { marginVertical: my },
+  mx && { marginHorizontal: my },
   m && { margin: m },
   p && { padding: p },
   pt && { marginTop: pt },

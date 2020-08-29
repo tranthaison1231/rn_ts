@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../components/UIkit/Text';
-import Box from '../components/UIkit/Box';
+import Text from '@UIkit/Text';
+import Box from '@UIkit/Box';
 
 const Favorites = () => {
   return (

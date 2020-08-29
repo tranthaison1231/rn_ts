@@ -6,13 +6,13 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { useTheme } from 'react-native-paper';
-import Root from './Root';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Root from './Root';
 
 const Stack = createStackNavigator();
 
-export const RootNavigator = () => {
+export const RootNavigator = (): JSX.Element => {
   const theme = useTheme();
   const navigationTheme = theme.dark ? DarkTheme : DefaultTheme;
 

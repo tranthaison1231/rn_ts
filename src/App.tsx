@@ -2,29 +2,32 @@ import React, { useEffect } from 'react';
 import 'react-native-gesture-handler';
 import { StatusBar } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
-// import { Provider as ReduxProvider } from 'react-redux';
+import { Provider } from 'react-redux';
 import SplashScreen from 'react-native-splash-screen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppearanceProvider } from 'react-native-appearance';
+import { PersistGate } from 'redux-persist/integration/react';
 import theme from './theme';
-import { RootNavigator } from './screens';
-// import store from './store';
+import store, { persistor } from './store';
+import { RootNavigator } from '@/screens';
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   }, []);
   return (
-    // <ReduxProvider store={store}>
-    <SafeAreaProvider>
-      <AppearanceProvider>
-        <PaperProvider theme={theme}>
-          <StatusBar barStyle="dark-content" />
-          <RootNavigator />
-        </PaperProvider>
-      </AppearanceProvider>
-    </SafeAreaProvider>
-    // </ReduxProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <SafeAreaProvider>
+          <AppearanceProvider>
+            <PaperProvider theme={theme}>
+              <StatusBar barStyle="dark-content" />
+              <RootNavigator />
+            </PaperProvider>
+          </AppearanceProvider>
+        </SafeAreaProvider>
+      </PersistGate>
+    </Provider>
   );
 };
 

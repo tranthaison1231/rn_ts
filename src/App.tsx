@@ -10,7 +10,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import theme from './theme';
 import store, { persistor } from './store';
 import { RootNavigator } from '@/screens';
-import Config from 'react-native-config';
 
 // import setupAxiosInterceptors from '@/api/setupAxiosInterceptors';
 
@@ -23,7 +22,6 @@ import Config from 'react-native-config';
 
 const App = () => {
   useEffect(() => {
-    console.log('SERVER_URL', Config.SERVER_URL);
     SplashScreen.hide();
   }, []);
   return (

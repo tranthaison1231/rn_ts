@@ -7,6 +7,7 @@ import Profile from './Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import withAuth from '@/hocs/withAuth';
+import { useSelector } from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
@@ -45,6 +46,8 @@ const TAB_SCREENS: TabScreen[] = [
 ];
 
 const Root = (): JSX.Element => {
+  const auth = useSelector((state) => state.auth);
+  console.log(auth);
   return (
     <Tab.Navigator
       initialRouteName="Home"

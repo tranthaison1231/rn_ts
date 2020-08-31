@@ -7,51 +7,31 @@ import {
   styleSpace,
   StyleSpaceProps,
   styleShadow,
+  styleSize,
+  styleBorder,
 } from './helpers';
 
-interface BoxProps extends StyleSpaceProps, StyleFlexBoxProps, ViewProps {
+interface BoxProps
+  extends StyleSpaceProps,
+    StyleFlexBoxProps,
+    StyleSizeProps,
+    StyleBorderProps,
+    StyleShadowProps,
+    ViewProps {
   circle?: boolean;
   bg?: string;
-  borderBottomWidth?: number;
-  borderBottomColor?: string;
-  borderColor?: string;
-  borderWidth?: number;
-  borderLeftWidth?: number;
-  borderTopRightRadius?: number;
-  borderBottomRightRadius?: number;
   // @ts-ignore
   as?: any;
 }
 
-const Box: FC<BoxProps> = ({
-  circle,
-  style,
-  children,
-  bg,
-  borderWidth,
-  borderColor,
-  borderLeftWidth,
-  borderBottomColor,
-  borderBottomWidth,
-  borderBottomRightRadius,
-  borderTopRightRadius,
-  as = View,
-  ...props
-}) => {
+const Box: FC<BoxProps> = ({ circle, style, bg, as = View, ...props }) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
     [...styleShadow(props)],
+    [...styleSize(props)],
+    [...styleBorder(props)],
     bg && { backgroundColor: bg },
-    borderBottomColor && { borderBottomColor: borderBottomColor },
-    borderBottomWidth && { borderBottomWidth: borderBottomWidth },
-    borderLeftWidth && { borderLeftWidth: borderLeftWidth },
-    borderTopRightRadius && { borderTopRightRadius: borderTopRightRadius },
-    borderBottomRightRadius && {
-      borderBottomRightRadius: borderBottomRightRadius,
-    },
-    borderColor && { borderColor: borderColor },
-    borderWidth && { borderWidth: borderWidth },
     circle && styles.circle,
     style,
   ];
@@ -61,7 +41,7 @@ const Box: FC<BoxProps> = ({
       style: blockStyles,
       ...props,
     },
-    children,
+    props.children,
   );
 };
 

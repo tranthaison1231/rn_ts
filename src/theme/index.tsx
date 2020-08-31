@@ -25,7 +25,7 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: 'tomato',
+    primary: '#DB3022',
     accent: 'yellow',
   },
   // @ts-ignore

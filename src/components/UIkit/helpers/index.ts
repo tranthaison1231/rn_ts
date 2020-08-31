@@ -28,8 +28,6 @@ export interface StyleSpaceProps {
   pr?: number | string;
   pl?: number | string;
   pb?: number | string;
-  w?: number | string;
-  h?: number | string;
 }
 
 export const styleSpace = ({
@@ -45,23 +43,62 @@ export const styleSpace = ({
   pr,
   pl,
   pb,
-  w,
-  h,
 }: StyleSpaceProps) => [
-  w && { width: w },
-  h && { height: h },
   mt && { marginTop: mt },
   mr && { marginRight: mr },
   ml && { marginLeft: ml },
   mb && { marginBottom: mb },
   my && { marginVertical: my },
-  mx && { marginHorizontal: my },
+  mx && { marginHorizontal: mx },
   m && { margin: m },
   p && { padding: p },
   pt && { marginTop: pt },
   pr && { marginRight: pr },
   pl && { marginLeft: pl },
   pb && { marginBottom: pb },
+];
+
+export interface StyleSizeProps {
+  w?: number | string;
+  h?: number | string;
+}
+
+export const styleSize = ({ w, h }: StyleProps) => [
+  w && { width: w },
+  h && { height: h },
+];
+
+export interface StyleBorderProps {
+  borderBottomWidth?: number;
+  borderBottomColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderLeftWidth?: number;
+  borderTopRightRadius?: number;
+  borderBottomRightRadius?: number;
+  borderRadius?: number;
+}
+
+export const styleBorder = ({
+  borderWidth,
+  borderColor,
+  borderLeftWidth,
+  borderBottomColor,
+  borderBottomWidth,
+  borderBottomRightRadius,
+  borderTopRightRadius,
+  borderRadius,
+}: StyleBorderProps) => [
+  borderBottomColor && { borderBottomColor: borderBottomColor },
+  borderBottomWidth && { borderBottomWidth: borderBottomWidth },
+  borderLeftWidth && { borderLeftWidth: borderLeftWidth },
+  borderTopRightRadius && { borderTopRightRadius: borderTopRightRadius },
+  borderBottomRightRadius && {
+    borderBottomRightRadius: borderBottomRightRadius,
+  },
+  borderColor && { borderColor: borderColor },
+  borderWidth && { borderWidth: borderWidth },
+  borderRadius && { borderRadius: borderRadius },
 ];
 
 export interface StyleFlexBoxProps {
@@ -95,16 +132,16 @@ export const styleFlexBox = ({
   space && { justifyContent: `space-${space}` },
 ];
 
-export interface StyleFlexBoxProps {
+export interface StyleShadowProps {
   shadowColor?: string;
-  boxShadow?: Range<1, 25>;
+  shadow?: Range<1, 25>;
 }
 
-export const styleShadow = ({ shadowColor, boxShadow }: StyleFlexBoxProps) => {
+export const styleShadow = ({ shadowColor, shadow }: StyleShadowProps) => {
   const styleObject: any = [shadowColor && { shadowColor: shadowColor }];
 
-  if (boxShadow) {
-    const depth = boxShadow - 1;
+  if (shadow) {
+    const depth = shadow - 1;
     const s = parseShadow(androidDepth.penumbra[depth]);
     const y = s.y === 1 ? 1 : Math.floor(s.y * 0.5);
     styleObject.push({

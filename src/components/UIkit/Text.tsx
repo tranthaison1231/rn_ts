@@ -21,7 +21,6 @@ const Text: FC<TextType> = ({
   bold,
   size,
   txtAlign,
-  children,
   ...props
 }) => {
   const blockStyles = [
@@ -36,7 +35,7 @@ const Text: FC<TextType> = ({
   return (
     // @ts-ignore
     <RnText style={blockStyles} {...props}>
-      {children}
+      {props.children}
     </RnText>
   );
 };

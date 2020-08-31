@@ -6,8 +6,8 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { useTheme } from 'react-native-paper';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+import SignIn from './Auth/SignIn';
+import SignUp from './Auth/SignUp';
 import Root from './Root';
 
 const Stack = createStackNavigator();

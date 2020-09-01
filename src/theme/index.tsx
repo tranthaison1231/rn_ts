@@ -26,6 +26,7 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     primary: '#DB3022',
+    error: '#F01F0E',
     accent: 'yellow',
   },
   // @ts-ignore

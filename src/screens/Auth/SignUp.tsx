@@ -8,6 +8,7 @@ import FieldInput from '@UIkit/FieldInput';
 import Box from '@UIkit/Box';
 import { useForm } from 'react-hook-form';
 import Button from '@UIkit/Button';
+import { validateRegex } from '@/utils/validateUtils';
 
 const SingUp = () => {
   const form = useForm({
@@ -38,6 +39,12 @@ const SingUp = () => {
             label="Email"
             bg="#fff"
             required
+            rules={{
+              pattern: {
+                value: validateRegex.email,
+                message: 'Email is not valid',
+              },
+            }}
           />
           <FieldInput
             form={form}

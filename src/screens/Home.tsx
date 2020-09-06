@@ -1,21 +1,24 @@
 import React from 'react';
 import Box from '@UIkit/Box';
 import Text from '@UIkit/Text';
-import Gradient from '@UIkit/Gradient';
+import Swiper from 'react-native-swiper';
+import SignInFacebook from '@/components/Button/SignInFacebook';
+import { useTheme } from 'react-native-paper';
 
 const Home = () => {
+  const theme = useTheme();
   return (
-    <Box flex={1} justify="center" align="center">
-      <Gradient
-        colors={['#4c669f', '#3b5998', '#192f6a']}
-        px={15}
-        borderRadius={5}
-      >
-        <Text m={10} color="#fff" bold>
-          Sign in with Facebook
-        </Text>
-      </Gradient>
-    </Box>
+    <Swiper activeDotColor={theme.colors.primary}>
+      <Box flex={1} justify="center" align="center">
+        <Text>Hello Swiper</Text>
+      </Box>
+      <Box flex={1} justify="center" align="center">
+        <Text>Beautiful</Text>
+      </Box>
+      <Box flex={1} justify="center" align="center">
+        <SignInFacebook />
+      </Box>
+    </Swiper>
   );
 };
 

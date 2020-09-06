@@ -9,7 +9,7 @@ import withAuth from '@/hocs/withAuth';
 import { useSelector } from 'react-redux';
 import { useTheme } from 'react-native-paper';
 import NullComponent from '@UIkit/NullComponent';
-import SpeedDial from '@UIkit/SpeedDial';
+import AddButton from '@UIkit/AddButton';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +33,7 @@ const TAB_SCREENS: TabScreen[] = [
   {
     name: 'Bag',
     component: NullComponent,
-    tabBarButton: () => <SpeedDial />,
+    tabBarButton: () => <AddButton />,
   },
   {
     name: 'Favorites',

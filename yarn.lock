@@ -31,13 +31,13 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.11.5":
-  version "7.11.5"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.11.5.tgz#6ad96e2f71899ea3f9b651f0a911e85205d1ff6d"
-  integrity sha512-fsEANVOcZHzrsV6dMVWqpSeXClq3lNbYrfFGme6DE25FQWe7pyeYpXyx9guqUnpy466JLzZ8z4uwSr2iv60V5Q==
+"@babel/core@^7.11.6":
+  version "7.11.6"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.11.6.tgz#3a9455dc7387ff1bac45770650bc13ba04a15651"
+  integrity sha512-Wpcv03AGnmkgm6uS6k8iwhIwTrcP0m17TL1n1sy7qD0qelDu4XNeW0dN0mHfa+Gei211yDaLoEe/VlbXQzM4Bg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
-    "@babel/generator" "^7.11.5"
+    "@babel/generator" "^7.11.6"
     "@babel/helper-module-transforms" "^7.11.0"
     "@babel/helpers" "^7.10.4"
     "@babel/parser" "^7.11.5"
@@ -51,7 +51,7 @@
     lodash "^4.17.19"
     resolve "^1.3.2"
     semver "^5.4.1"
-    source-map "^0.6.1"
+    source-map "^0.5.0"
 
 "@babel/generator@^7.11.0", "@babel/generator@^7.11.4", "@babel/generator@^7.5.0":
   version "7.11.4"
@@ -70,6 +70,15 @@
     "@babel/types" "^7.11.5"
     jsesc "^2.5.1"
     source-map "^0.6.1"
+
+"@babel/generator@^7.11.6":
+  version "7.11.6"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.11.6.tgz#b868900f81b163b4d464ea24545c61cbac4dc620"
+  integrity sha512-DWtQ1PV3r+cLbySoHrwn9RWEgKMBLLma4OBQloPRyDYvc5msJM9kvTLo1YnlJd1P/ZuKbdli3ijr5q3FvAF3uA==
+  dependencies:
+    "@babel/types" "^7.11.5"
+    jsesc "^2.5.1"
+    source-map "^0.5.0"
 
 "@babel/helper-annotate-as-pure@^7.10.4":
   version "7.10.4"
@@ -800,14 +809,20 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
-"@eslint/eslintrc@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.1.0.tgz#3d1f19fb797d42fb1c85458c1c73541eeb1d9e76"
-  integrity sha512-bfL5365QSCmH6cPeFT7Ywclj8C7LiF7sO6mUGzZhtAMV7iID1Euq6740u/SRi4C80NOnVz/CEfK8/HO+nCAPJg==
+"@eslint/eslintrc@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.1.3.tgz#7d1a2b2358552cc04834c0979bd4275362e37085"
+  integrity sha512-4YVwPkANLeNtRjMekzux1ci8hIaH5eGKktGqR0d3LWsKNn5B2X/1Z6Trxy7jQXl9EBGE6Yj02O+t09FMeRllaA==
   dependencies:
     ajv "^6.12.4"
     debug "^4.1.1"
+    espree "^7.3.0"
+    globals "^12.1.0"
+    ignore "^4.0.6"
     import-fresh "^3.2.1"
+    js-yaml "^3.13.1"
+    lodash "^4.17.19"
+    minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
 "@hapi/address@2.x.x":
@@ -1219,6 +1234,13 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
+"@react-native-community/datetimepicker@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-3.0.2.tgz#6e52cda7fa46ecebfb216f5520cfbf2754348299"
+  integrity sha512-NLcV3HLrjtvyYM4CU4O+nWJ+LsjB4XnkUiXjK52PgnlRrg5i3hJQHcp/GsrHQbB62UC+Zn96+Hy+jiw4K5Rw/w==
+  dependencies:
+    invariant "^2.2.4"
+
 "@react-native-community/eslint-config@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-config/-/eslint-config-2.0.0.tgz#35dcc529a274803fc4e0a6b3d6c274551fb91774"
@@ -1420,10 +1442,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.12":
-  version "26.0.12"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.12.tgz#0f20fef9e74f55a312530284e6178f3b3254f501"
-  integrity sha512-vZOFjm562IPb1EmaKxMjdcouxVb1l3NqoUH4XC4tDQ2R/AWde+0HXBUhyfc6L+7vc3mJ393U+5vr3nH2CLSVVg==
+"@types/jest@^26.0.13":
+  version "26.0.13"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.13.tgz#5a7b9d5312f5dd521a38329c38ee9d3802a0b85e"
+  integrity sha512-sCzjKow4z9LILc6DhBvn5AkIfmQzDZkgtVVKmGwVrs5tuid38ws281D4l+7x1kP487+FlKDh5kfMZ8WSPAdmdA==
   dependencies:
     jest-diff "^25.2.1"
     pretty-format "^25.2.1"
@@ -1478,10 +1500,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@^0.63.12":
-  version "0.63.12"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.12.tgz#fa4aea76220cd11220c4a7c1b7e14e00886539a2"
-  integrity sha512-EPZ4C9OImXDg59entU0wcg/yCelj+XhgvUpPz85VSKia01DULoGwHOyCH3Y3ZdVcijebSR58ekqAz7zHT8o3Tg==
+"@types/react-native@^0.63.15":
+  version "0.63.15"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.15.tgz#f86ce87a0afc53bec7c6bc96282e698e0a03ce1b"
+  integrity sha512-ZFOHFn4NNKxvpHfri099KMVCeHU9Rvu7E3GC6ST1KGoktipyfWTW0HLePKAflbmARODAh84ci4HSzAXnW54FXw==
   dependencies:
     "@types/react" "*"
 
@@ -3235,13 +3257,13 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.8.0.tgz#9a3e2e6e4d0a3f8c42686073c25ebf2e91443e8a"
-  integrity sha512-qgtVyLZqKd2ZXWnLQA4NtVbOyH56zivOAdBFWE54RFkSZjokzNrcP4Z0eVWsZ+84ByXv+jL9k/wE1ENYe8xRFw==
+eslint@^7.8.1:
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.8.1.tgz#e59de3573fb6a5be8ff526c791571646d124a8fa"
+  integrity sha512-/2rX2pfhyUG0y+A123d0ccXtMm7DV7sH1m3lk9nk2DZ2LReq39FXHueR9xZwshE5MdfSf0xunSaMWRqyIA6M1w==
   dependencies:
     "@babel/code-frame" "^7.0.0"
-    "@eslint/eslintrc" "^0.1.0"
+    "@eslint/eslintrc" "^0.1.3"
     ajv "^6.10.0"
     chalk "^4.0.0"
     cross-spawn "^7.0.2"
@@ -6396,10 +6418,10 @@ react-fast-compare@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-hook-form@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.7.0.tgz#84702b6a56c6c81d7c43cbfbd343e4884dd1e6be"
-  integrity sha512-2ySZ/lyp8xinKUMv/yoSo3NcNknfrHGlJ1pIV2U80H0WlFSGaGZ0wvAHmgfl1L5ZhoQND6mawcv09wuM8OGVPw==
+react-hook-form@^6.7.2:
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.7.2.tgz#a6a498bff188cfead9fd8e4a1404bd53e0ebe66e"
+  integrity sha512-nZakWdvKqAuoz96UD463/lWND4/yMZIr4xTRdkyeN2JDnXbrWgCeVjwP6/mLw33WajMCHSdFW4tvJTq+bM9dzg==
 
 react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
   version "16.13.1"
@@ -6420,13 +6442,13 @@ react-native-config@^1.3.3:
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.3.3.tgz#307ba512f92e4ecdc9ced06288610c0608da3ae7"
   integrity sha512-uc84IFVLqu2dC7Zutg3OlK6RZYvJlGbIdi0v1ZxjUhU379Nz9IkZR1t8J1L5QSnGV8885mtwWDPJRdQyVNFsAw==
 
-react-native-gesture-handler@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz#0ef74a5ba836832e497dc49eb1ce58baa6c617e5"
-  integrity sha512-1CrjJf8Z6Iz2XWzfZknYtsm2sud5Lu/pLhhokkgBIKttxqGDtetDEVFDJOTJWJyKCrUPk0X5tnWi/diSF4q++w==
+react-native-gesture-handler@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.8.0.tgz#18f61f51da50320f938957b0ee79bc58f47449dc"
+  integrity sha512-E2FZa0qZ5Bi0Z8Jg4n9DaFomHvedSjwbO2DPmUUHYRy1lH2yxXUpSrqJd6yymu+Efzmjg2+JZzsjFYA2Iq8VEQ==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
-    hoist-non-react-statics "^2.3.1"
+    hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
@@ -6434,6 +6456,11 @@ react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
+
+react-native-linear-gradient@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
+  integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
 react-native-paper@^4.1.0:
   version "4.1.0"
@@ -6479,11 +6506,6 @@ react-native-splash-screen@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
   integrity sha512-Ls9qiNZzW/OLFoI25wfjjAcrf2DZ975hn2vr6U9gyuxi2nooVbzQeFoQS5vQcbCt9QX5NY8ASEEAtlLdIa6KVg==
-
-react-native-sqlite-storage@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-sqlite-storage/-/react-native-sqlite-storage-5.0.0.tgz#fb015c928b59d3000360fb0774a99545e7a695d6"
-  integrity sha512-c1Joq3/tO1nmIcP8SkRZNolPSbfvY8uZg5lXse0TmjIPC0qHVbk96IMvWGyly1TmYCIpxpuDRc0/xCffDbYIvg==
 
 react-native-svg@^12.1.0:
   version "12.1.0"

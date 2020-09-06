@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import { View, ViewProps } from 'react-native';
+import LinearGradient, {
+  LinearGradientProps,
+} from 'react-native-linear-gradient';
 import {
   styleFlexBox,
   StyleFlexBoxProps,
-  styles,
   styleSpace,
   StyleSpaceProps,
   styleShadow,
@@ -16,21 +17,16 @@ import {
   StyleBorderProps,
 } from './helpers';
 
-interface BoxProps
+interface GradientProps
   extends StyleSpaceProps,
     StyleFlexBoxProps,
     StyleSizeProps,
     StyleBorderProps,
     StyleShadowProps,
     StylePositionProps,
-    ViewProps {
-  circle?: boolean;
-  bg?: string;
-  // @ts-ignore
-  as?: any;
-}
+    LinearGradientProps {}
 
-const Box: FC<BoxProps> = ({ circle, style, bg, as = View, ...props }) => {
+const Gradient: FC<GradientProps> = ({ style, ...props }) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
@@ -38,12 +34,10 @@ const Box: FC<BoxProps> = ({ circle, style, bg, as = View, ...props }) => {
     [...styleShadow(props)],
     [...styleSize(props)],
     [...styleBorder(props)],
-    bg && { backgroundColor: bg },
-    circle && styles.circle,
     style,
   ];
   return React.createElement(
-    as,
+    LinearGradient,
     {
       style: blockStyles,
       ...props,
@@ -52,4 +46,4 @@ const Box: FC<BoxProps> = ({ circle, style, bg, as = View, ...props }) => {
   );
 };
 
-export default Box;
+export default Gradient;

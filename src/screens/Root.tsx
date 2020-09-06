@@ -1,13 +1,15 @@
 import React, { FunctionComponent, ComponentClass } from 'react';
 import Home from './Home';
 import Shop from './Shop';
-import Bag from './Bag';
 import Favorites from './Favorites';
 import Profile from './Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import withAuth from '@/hocs/withAuth';
 import { useSelector } from 'react-redux';
+import { useTheme } from 'react-native-paper';
+import NullComponent from '@UIkit/NullComponent';
+import SpeedDial from '@UIkit/SpeedDial';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,8 +32,8 @@ const TAB_SCREENS: TabScreen[] = [
   },
   {
     name: 'Bag',
-    component: Bag,
-    icon: 'shopping-outline',
+    component: NullComponent,
+    tabBarButton: () => <SpeedDial />,
   },
   {
     name: 'Favorites',
@@ -46,26 +48,27 @@ const TAB_SCREENS: TabScreen[] = [
 ];
 
 const Root = (): JSX.Element => {
+  const theme = useTheme();
   const auth = useSelector((state) => state.auth);
   console.log(auth);
   return (
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: '#DB3022',
+        activeTintColor: theme.colors.primary,
         inactiveTintColor: '#9B9B9B',
       }}
     >
-      {TAB_SCREENS.map(({ name, component, icon }, index) => (
+      {TAB_SCREENS.map(({ name, component, icon, tabBarButton }, index) => (
         // @ts-ignore
         <Tab.Screen
           key={String(index)}
           name={name}
           component={component}
           options={{
-            tabBarIcon: ({ color, size }) => (
-              <Icon name={icon} size={size} color={color} />
-            ),
+            tabBarIcon: ({ color, size }) =>
+              icon && <Icon name={icon} size={size} color={color} />,
+            tabBarButton: tabBarButton,
           }}
         />
       ))}

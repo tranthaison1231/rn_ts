@@ -23,6 +23,8 @@ export interface StyleSpaceProps {
   mb?: number | string;
   my?: number | string;
   mx?: number | string;
+  py?: number | string;
+  px?: number | string;
   p?: number | string;
   pt?: number | string;
   pr?: number | string;
@@ -42,6 +44,8 @@ export const styleSpace = ({
   pt,
   pr,
   pl,
+  px,
+  py,
   pb,
 }: StyleSpaceProps) => [
   mt && { marginTop: mt },
@@ -50,6 +54,8 @@ export const styleSpace = ({
   mb && { marginBottom: mb },
   my && { marginVertical: my },
   mx && { marginHorizontal: mx },
+  py && { paddingVertical: py },
+  px && { paddingHorizontal: px },
   m && { margin: m },
   p && { padding: p },
   pt && { marginTop: pt },
@@ -105,6 +111,7 @@ export interface StyleFlexBoxProps {
   flex?: number;
   row?: boolean;
   column?: boolean;
+  wrap?: boolean;
   justify?:
     | 'flex-start'
     | 'flex-end'
@@ -123,10 +130,12 @@ export const styleFlexBox = ({
   justify,
   align,
   space,
+  wrap,
 }: StyleFlexBoxProps) => [
   flex && { flex: flex },
   justify && { justifyContent: justify },
   align && { alignItems: align },
+  wrap && { flexWrap: 'wrap' },
   row && styles.row,
   column && styles.column,
   space && { justifyContent: `space-${space}` },
@@ -156,3 +165,28 @@ export const styleShadow = ({ shadowColor, shadow }: StyleShadowProps) => {
   }
   return styleObject;
 };
+
+export interface StylePositionProps {
+  absolute?: boolean;
+  relative?: boolean;
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
+}
+
+export const stylePosition = ({
+  absolute,
+  relative,
+  top,
+  bottom,
+  left,
+  right,
+}: StylePositionProps) => [
+  absolute && { position: 'absolute' },
+  relative && { position: 'relative' },
+  top && { top: top },
+  bottom && { bottom: bottom },
+  left && { left: left },
+  right && { right: right },
+];

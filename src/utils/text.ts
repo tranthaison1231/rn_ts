@@ -16,3 +16,7 @@ export const onChangeAlias = (value: string | number): string => {
   str = str.trim();
   return str;
 };
+
+export const searchByName = (str1: string, str2: string): boolean => {
+  return onChangeAlias(str1).includes(onChangeAlias(str2));
+};

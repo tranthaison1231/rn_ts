@@ -26,6 +26,7 @@ const AddContact = () => {
     dispatch(insertContact(value));
     goBack();
   };
+  console.log(form.errors);
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 }}>

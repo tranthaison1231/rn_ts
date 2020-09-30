@@ -3,11 +3,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
-import Text from '@UIkit/Text';
-import FieldInput from '@UIkit/FieldInput';
-import Box from '@UIkit/Box';
+import { Box, Text, FieldInput, Button } from '@shyn123/rn-uikit';
 import { useForm } from 'react-hook-form';
-import Button from '@UIkit/Button';
 import { validateRegex } from '@/utils/validateUtils';
 
 const SingUp = () => {

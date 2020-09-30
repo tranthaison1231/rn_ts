@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Box from '@UIkit/Box';
+import { Box, Button } from '@shyn123/rn-uikit';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import Button from '@UIkit/Button';
 import { Platform } from 'react-native';
 
 const Shop = () => {

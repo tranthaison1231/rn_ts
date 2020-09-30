@@ -1,9 +1,6 @@
 import React, { FC } from 'react';
-import { GestureResponderEvent, Animated } from 'react-native';
-import {
-  TouchableOpacity,
-  TouchableHighlight,
-} from 'react-native-gesture-handler';
+import { Animated } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Box from './Box';

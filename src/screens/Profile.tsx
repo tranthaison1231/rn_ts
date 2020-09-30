@@ -1,6 +1,5 @@
 import React from 'react';
-import Text from '@UIkit/Text';
-import Box from '@UIkit/Box';
+import { Box, Text } from '@shyn123/rn-uikit';
 
 const Profile = () => {
   return (

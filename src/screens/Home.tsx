@@ -1,6 +1,5 @@
 import React from 'react';
-import Box from '@UIkit/Box';
-import Text from '@UIkit/Text';
+import { Box, Text } from '@shyn123/rn-uikit';
 import Swiper from 'react-native-swiper';
 import SignInFacebook from '@/components/Button/SignInFacebook';
 import { useTheme } from 'react-native-paper';

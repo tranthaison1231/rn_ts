@@ -1,4 +1,4 @@
-import Box from '@UIkit/Box';
+import { Box } from '@shyn123/rn-uikit';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';

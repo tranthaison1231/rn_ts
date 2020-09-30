@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import Text from '@UIkit/Text';
-import Gradient from '@UIkit/Gradient';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Text, Gradient } from '@shyn123/rn-uikit';
 
 interface Props {
   onPress?: ((event: GestureResponderEvent) => void) | undefined;

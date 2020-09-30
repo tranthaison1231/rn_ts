@@ -1,5 +1,5 @@
 import call from '@/utils/call';
-import Box from '@UIkit/Box';
+import { Box } from '@shyn123/rn-uikit';
 import Text from '@UIkit/Text';
 import React from 'react';
 import { Avatar, Dialog, useTheme, IconButton } from 'react-native-paper';

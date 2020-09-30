@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@UIkit/Box';
+import { Box } from '@shyn123/rn-uikit';
 import { VictoryBar, VictoryChart, VictoryTheme } from 'victory-native';
 
 const data = [

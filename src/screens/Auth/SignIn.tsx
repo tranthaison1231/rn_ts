@@ -1,6 +1,5 @@
 import React from 'react';
-import Box from '@UIkit/Box';
-import Text from '@UIkit/Text';
+import { Box, Text } from '@shyn123/rn-uikit';
 
 const SignIn = () => {
   return (

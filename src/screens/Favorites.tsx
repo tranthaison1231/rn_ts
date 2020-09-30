@@ -1,7 +1,6 @@
+import { FAB } from 'react-native-paper';
+import { Box, Text } from '@shyn123/rn-uikit';
 import React from 'react';
-import Text from '@UIkit/Text';
-import Box from '@UIkit/Box';
-import { FAB, Portal, Provider } from 'react-native-paper';
 
 const Favorites = () => {
   const [state, setState] = React.useState({ open: false });

@@ -8,8 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import withAuth from '@/hocs/withAuth';
 import { useSelector } from 'react-redux';
 import { useTheme } from 'react-native-paper';
-import NullComponent from '@UIkit/NullComponent';
-import AddButton from '@UIkit/AddButton';
+import { NullComponent, AddButton } from '@shyn123/rn-uikit';
 
 const Tab = createBottomTabNavigator();
 

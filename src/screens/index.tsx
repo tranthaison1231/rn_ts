@@ -9,8 +9,8 @@ import { useTheme } from 'react-native-paper';
 import SignIn from './Auth/SignIn';
 import SignUp from './Auth/SignUp';
 import Root from './Root';
-import Contact from './Contact/Contact';
-import AddContact from './Contact/AddContact';
+import Dog from './Dog';
+import DogDetail from './Dog/DogDetail';
 
 const Stack = createStackNavigator();
 
@@ -20,14 +20,9 @@ export const RootNavigator = (): JSX.Element => {
 
   return (
     <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator
-        initialRouteName="Contact"
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="Contact" component={Contact} />
-        <Stack.Screen name="AddContact" component={AddContact} />
+      <Stack.Navigator initialRouteName="DogApp">
+        <Stack.Screen name="DogApp" component={Dog} />
+        <Stack.Screen name="DogDetail" component={DogDetail} />
         <Stack.Screen name="Root" component={Root} />
         <Stack.Screen
           name="SignUp"

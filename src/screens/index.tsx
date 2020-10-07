@@ -11,28 +11,37 @@ import SignUp from './Auth/SignUp';
 import Root from './Root';
 import Dog from './Dog';
 import DogDetail from './Dog/DogDetail';
+import { ReactQueryConfigProvider } from 'react-query';
 
 const Stack = createStackNavigator();
+
+const queryConfig = {
+  refetchAllOnWindowFocus: true,
+  retry: 0,
+  staleTime: 60000,
+};
 
 export const RootNavigator = (): JSX.Element => {
   const theme = useTheme();
   const navigationTheme = theme.dark ? DarkTheme : DefaultTheme;
 
   return (
-    <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator initialRouteName="DogApp">
-        <Stack.Screen name="DogApp" component={Dog} />
-        <Stack.Screen name="DogDetail" component={DogDetail} />
-        <Stack.Screen name="Root" component={Root} />
-        <Stack.Screen
-          name="SignUp"
-          component={SignUp}
-          options={{
-            gestureEnabled: false,
-          }}
-        />
-        <Stack.Screen name="SignIn" component={SignIn} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <ReactQueryConfigProvider config={queryConfig}>
+      <NavigationContainer theme={navigationTheme}>
+        <Stack.Navigator initialRouteName="DogApp">
+          <Stack.Screen name="DogApp" component={Dog} />
+          <Stack.Screen name="DogDetail" component={DogDetail} />
+          <Stack.Screen name="Root" component={Root} />
+          <Stack.Screen
+            name="SignUp"
+            component={SignUp}
+            options={{
+              gestureEnabled: false,
+            }}
+          />
+          <Stack.Screen name="SignIn" component={SignIn} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ReactQueryConfigProvider>
   );
 };

@@ -24,13 +24,10 @@ const queryConfig = {
 export const RootNavigator = (): JSX.Element => {
   const theme = useTheme();
   const navigationTheme = theme.dark ? DarkTheme : DefaultTheme;
-
   return (
     <ReactQueryConfigProvider config={queryConfig}>
       <NavigationContainer theme={navigationTheme}>
-        <Stack.Navigator initialRouteName="DogApp">
-          <Stack.Screen name="DogApp" component={Dog} />
-          <Stack.Screen name="DogDetail" component={DogDetail} />
+        <Stack.Navigator initialRouteName="Root">
           <Stack.Screen name="Root" component={Root} />
           <Stack.Screen
             name="SignUp"

@@ -20,7 +20,7 @@
     "delete:cache": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache verify && yarn && yarn start --reset-cache"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.12.0",
+    "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/datetimepicker": "^3.0.3",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.9.1",
@@ -28,7 +28,7 @@
     "@react-navigation/native": "^5.7.5",
     "@react-navigation/stack": "^5.9.2",
     "@reduxjs/toolkit": "^1.4.0",
-    "@shyn123/rn-uikit": "^0.1.2",
+    "@shyn123/rn-uikit": "^0.2.1",
     "axios": "^0.20.0",
     "react": "16.13.1",
     "react-hook-form": "^6.9.2",

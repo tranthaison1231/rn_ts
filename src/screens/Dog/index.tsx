@@ -2,7 +2,7 @@ import DogCard from '@/components/Card/DogCard';
 import { windowWidth } from '@/utils/dimension';
 import { searchByName } from '@/utils/text';
 import { useNavigation } from '@react-navigation/native';
-import { Box, useCallbackState } from '@shyn123/rn-uikit';
+import { Box } from '@shyn123/rn-uikit';
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';

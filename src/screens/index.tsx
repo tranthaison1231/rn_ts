@@ -6,12 +6,10 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { useTheme } from 'react-native-paper';
+import { ReactQueryConfigProvider } from 'react-query';
 import SignIn from './Auth/SignIn';
 import SignUp from './Auth/SignUp';
 import Root from './Root';
-import Dog from './Dog';
-import DogDetail from './Dog/DogDetail';
-import { ReactQueryConfigProvider } from 'react-query';
 
 const Stack = createStackNavigator();
 
